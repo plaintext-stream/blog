@@ -1,5 +1,5 @@
-baseURL: "https://blog.bytoken.link/"
-title: 词元计数器
+baseURL: "https://blog.plaintext.stream/"
+title: "词元重定向"
 languageCode: zh-Hans
 theme: PaperMod
 
@@ -28,9 +28,9 @@ outputs:
 
 params:
   env: production
-  title: "词元计数器"
-  description: "418 I'm a teapot | 词元的个人博客"
-  keywords: ["博客", "科技", "开源", "Linux", "Python", "生活"]
+  title: "词元重定向"
+  description: "词元的个人博客，偶尔是纯文本流站点的更新日志"
+  keywords: ["博客", "科技", "开源", "Linux", "Python", "生活", "更新日志"]
   author: "Tokenicrat 词元"
   DateFormat: "2006/01/02"
   defaultTheme: auto
@@ -58,7 +58,7 @@ params:
     favicon32x32: "/favicon32x32.webp"
 
   label:
-    text: "词元计数器"
+    text: "词元重定向"
     icon: /homeicon.webp
     iconHeight: 32
 
@@ -66,7 +66,7 @@ params:
     enabled: false
 
   homeInfoParams:
-    Title: "418 I'm a teapot"
+    Title: "C'mon tee 'em!"
     Content: "词元和他的小破站，偶尔咕咕咕地发一点东西"
 
   socialIcons:
@@ -81,7 +81,7 @@ params:
     hiddenInSingle: false
 
   editPost:
-    URL: "https://github.com/tokenicrat/blog/tree/main/content"
+    URL: "https://github.com/plaintext-stream/blog/tree/main/content"
     Text: "有错误？"
     appendFilePath: true
 

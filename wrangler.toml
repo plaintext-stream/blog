@@ -1,5 +1,5 @@
 name = "blog"
-compatibility_date = "2025-11-15"
+compatibility_date = "2026-02-01"
 
 [assets]
 directory = "./public"

@@ -3,7 +3,7 @@ title: "关于"
 date: "2025-11-22"
 description: "词元和词元计数器的自我介绍"
 cover:
-  image: "https://blog.static.bytoken.link/about/8242fc32efb861b8d2fa.webp"
+  image: "https://blog.static.plaintext.stream/about/8242fc32efb861b8d2fa.webp"
 ---
 
 你好，世界。我是「词元」，这里是我的博客「词元计数器」。
@@ -34,7 +34,7 @@ cover:
 
 页面 URL 设成随机字符串是故意的。
 
-欢迎来看 GitHub [repo](https://github.com/tokenicrat/blog)，自定义 tweak 在 `/layout` 和 `/assets` 里。
+欢迎来看 GitHub [repo](https://github.com/plaintext-stream/blog)，自定义 tweak 在 `/layout` 和 `/assets` 里。
 
 {{< details summary="更新日志" >}}
 
