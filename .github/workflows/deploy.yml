@@ -54,6 +54,17 @@ jobs:
       - name: Build
         run: bash build.sh
 
-      - name: Upload Preview Version
-        run: npx wrangler versions upload
-  
+      - name: Upload preview version
+        id: wrangler_preview
+        run: |
+          OUTPUT=$(npx wrangler versions upload)
+          echo "$OUTPUT"
+          URL=$(echo "$OUTPUT" | grep -oE "https://[^ ]+\.workers\.dev" | head -n 1)
+          echo "preview_url=$URL" >> $GITHUB_OUTPUT
+      
+      - name: Comment preview URL
+        uses: peter-evans/commit-comment@v4
+        if: steps.wrangler_preview.outputs.preview_url != ''
+        with:
+          body: |
+            **Preview**: ${{ steps.wrangler_preview.outputs.preview_url }}
