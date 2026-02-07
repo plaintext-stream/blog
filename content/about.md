@@ -1,7 +1,7 @@
 ---
 title: "关于"
 date: "2025-11-22"
-description: "词元和词元计数器的自我介绍"
+description: "「词元」和「词元重定向」的自我介绍"
 cover:
   image: "https://blog.static.plaintext.stream/about/8242fc32efb861b8d2fa.webp"
 ---
@@ -24,9 +24,9 @@ cover:
 - X：[Tokenicrat 词元](https://x.com/tokenicrat)
 - GitHub：[Tokenicrat](https://github.com/tokenicrat)
 
-## 词元计数器
+## 词元重定向
 
-词元的个人博客，人烟稀少。
+词元的个人博客，同时是「纯文本流」站点的更新日志，人烟稀少。
 
 大致算是「日志」式写法，记录经验、感受、闲话。内容成分复杂，推荐 [分类](/categories) 阅读。
 
@@ -49,5 +49,8 @@ cover:
 - **2025/11** 迁移到（回）词元更熟悉的 Hugo + PaperMod
 - **2025/11** 图片托管迁移到 Cloudflare R1
 - **2026/01** WebP 压缩效率恐怖如斯，遂全面换用
+- **2026/02** 重新组织词元的站点们
+  - 迁移到 `blog.plaintext.stream` 域名
+  - GitHub 仓库变更为 `plaintext-stream/blog`
 
 {{< /details >}}
