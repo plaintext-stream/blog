@@ -1,6 +1,6 @@
 # 词元重定向
 
-> [!INFO]
+> [!NOTE]
 > 原名「词元计数器」，原域名 `blog.bytoken.link`
 
 词元的个人博客，基于 Hugo 和 PaperMod 构建。
