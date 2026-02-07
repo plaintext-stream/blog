@@ -2,7 +2,7 @@
 
 set -e
 
-VERSION="0.152.2"
+VERSION="$(curl -sS https://api.github.com/repos/gohugoio/hugo/releases/latest | python3 -c 'import sys,json; print(json.load(sys.stdin)["tag_name"][1:])')"
 
 echo "Build for Cloudflare Workers..."
 
