@@ -6,10 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKERS_API_TOKEN }}
-  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-
 jobs:
   deploy:
     if: |
@@ -19,52 +15,57 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Install Wrangler
-        run: npm install -g wrangler
+          node-version: '25'
 
       - name: Build
         run: bash build.sh
 
       - name: Deploy to Production
         run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKERS_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
   preview:
     if: |
       github.event_name == 'workflow_dispatch' || 
       contains(github.event.head_commit.message, '[preview]')
     runs-on: ubuntu-slim
+    permissions:
+      contents: write
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: true
       
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Install Wrangler
-        run: npm install -g wrangler
+          node-version: '25'
 
       - name: Build
-        run: bash build.sh
+        id: hugo_build
+        run: |
+          PREFIX="preview-$(openssl rand -hex 4)"
+          HUGO_BASEURL="${PREFIX}-blog.tokenilab.workers.dev" bash build.sh
+          echo "preview_alias=$PREFIX" >> $GITHUB_OUTPUT
 
       - name: Upload preview version
-        id: wrangler_preview
         run: |
-          OUTPUT=$(npx wrangler versions upload)
-          echo "$OUTPUT"
-          URL=$(echo "$OUTPUT" | grep -oE "https://[^ ]+\.workers\.dev" | head -n 1)
-          echo "preview_url=$URL" >> $GITHUB_OUTPUT
+          npx wrangler versions upload --preview-alias "preview-${{ steps.hugo_build.outputs.preview_alias }}"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKERS_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       
       - name: Comment preview URL
         uses: peter-evans/commit-comment@v4
-        if: steps.wrangler_preview.outputs.preview_url != ''
         with:
           body: |
-            **Preview**: ${{ steps.wrangler_preview.outputs.preview_url }}
+            **Preview**: preview-${{ steps.hugo_build.outputs.preview_alias }}.tokenilab.workers.dev
