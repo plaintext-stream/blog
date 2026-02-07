@@ -52,7 +52,7 @@ jobs:
         id: hugo_build
         run: |
           PREFIX="preview-$(openssl rand -hex 4)"
-          HUGO_BASEURL="${PREFIX}-blog.tokenilab.workers.dev" bash build.sh
+          HUGO_BASEURL="https://${PREFIX}-blog.tokenilab.workers.dev/" bash build.sh
           echo "preview_alias=$PREFIX" >> $GITHUB_OUTPUT
 
       - name: Deploy preview
@@ -66,4 +66,4 @@ jobs:
         uses: peter-evans/commit-comment@v4
         with:
           body: |
-            🔎 Preview available at [workers.dev](${{ steps.hugo_build.outputs.preview_alias }}-blog.tokenilab.workers.dev)
+            🔎 Preview available at [workers.dev](https://${{ steps.hugo_build.outputs.preview_alias }}-blog.tokenilab.workers.dev)
