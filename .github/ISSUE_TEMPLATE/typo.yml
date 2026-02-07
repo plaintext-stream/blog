@@ -1,8 +1,7 @@
 name: "错别字"
 description: "文章中有错字、拼写错误，或词语、语法使用问题"
-title: ""
+title: "【错别字】"
 labels: ["错别字"]
-type: bug
 body:
   - type: input
     id: post_id

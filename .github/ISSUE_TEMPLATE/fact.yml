@@ -1,8 +1,7 @@
 name: "事实性错误"
 description: "文章中有显然不符合实际的内容"
-title: ""
+title: "【事实性错误】"
 labels: ["事实性错误"]
-type: bug
 body:
   - type: input
     id: post_id

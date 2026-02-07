@@ -1,8 +1,7 @@
 name: "技术问题"
 description: "网站设计、功能、安全等有故障"
-title: ""
+title: "【技术问题】"
 labels: ["技术问题"]
-type: bug
 body:
   - type: input
     id: description
