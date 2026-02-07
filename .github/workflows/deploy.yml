@@ -68,4 +68,4 @@ jobs:
         uses: peter-evans/commit-comment@v4
         with:
           body: |
-            **Preview**: <${{ steps.hugo_build.outputs.preview_alias }}-blog.tokenilab.workers.dev>
+            🔎 Preview available at [workers.dev](${{ steps.hugo_build.outputs.preview_alias }}-blog.tokenilab.workers.dev)
