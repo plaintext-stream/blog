@@ -1,0 +1,35 @@
+name: "技术问题"
+description: "网站设计、功能、安全等有故障"
+title: ""
+labels: ["技术问题"]
+type: bug
+body:
+  - type: input
+    id: description
+    attributes:
+      label: "问题描述"
+      description: "请简要描述问题，如有必要请包含截图和日志"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "重现"
+      description: "请简述如何重现您遇到的问题"
+    validations:
+      required: false
+  - type: textarea
+    id: potential_solution
+    attributes:
+      label: "解决方法"
+      description: "如果您认为您可以解决这个问题，请慷慨地提供建议！"
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 您确认您的信息准确吗？
+      description: 请确认您已经包括了所有有用的信息
+      options:
+        - label: 是的
+          required: true

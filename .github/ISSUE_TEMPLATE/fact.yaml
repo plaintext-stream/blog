@@ -1,0 +1,38 @@
+name: "事实性错误"
+description: "文章中有显然不符合实际的内容"
+title: ""
+labels: ["事实性错误"]
+type: bug
+body:
+  - type: input
+    id: post_id
+    attributes:
+      label: "文章 ID"
+      description: "10 位的十六进制编号，即文章 URL 的最后一部分"
+      placeholder: "如 https://blog.plaintext.stream/posts/f54052f6f8/ 请填写 f54052f6f8"
+    validations:
+      required: true
+  - type: textarea
+    id: original_text
+    attributes:
+      label: "原文"
+      description: "引用原文您认为错误的部分"
+      placeholder: "地球是平的！"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "依据"
+      description: "为什么您认为这里是错误的？请引用信息源"
+      placeholder: "https://en.wikipedia.org/wiki/Earth"
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 您确认您的信息准确吗？
+      description: 请确认您已经包括了所有有用的信息
+      options:
+        - label: 是的
+          required: true
