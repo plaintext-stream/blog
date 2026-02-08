@@ -20,7 +20,7 @@ cover:
 
 ### 抓！
 
-- 邮箱：[hi@bytoken.link](mailto:hi@bytoken.link)
+- 邮箱：[hi@plaintext.stream](mailto:hi@plaintext.stream)
 - X：[Tokenicrat 词元](https://x.com/tokenicrat)
 - GitHub：[Tokenicrat](https://github.com/tokenicrat)
 
