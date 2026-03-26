@@ -24,4 +24,4 @@
 
 ## 更多信息
 
-请访问站点：<https://blog.bytoken.link>
+请访问站点：<https://blog.plaintext.stream>
