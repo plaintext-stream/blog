@@ -21,12 +21,14 @@ cover:
 ### 抓！
 
 - 邮箱：[hi@plaintext.stream](mailto:hi@plaintext.stream)
-- X：[Tokenicrat 词元](https://x.com/tokenicrat)
-- GitHub：[Tokenicrat](https://github.com/tokenicrat)
+- 时间线：[词元鹦鹉窝](https://timeline.plaintext.stream)
+- GitHub：[Tokenicrat 词元](https://github.com/tokenicrat)
+- X: [Tokenicrat 词元](https://x.com/tokenicrat)
+- Telegram: [Tokenicrat 词元](https://t.me/tokenicrat)
 
 ## 词元重定向
 
-词元的个人博客，同时是「纯文本流」站点的更新日志，人烟稀少。
+词元的个人博客，人烟稀少。
 
 大致算是「日志」式写法，记录经验、感受、闲话。内容成分复杂，推荐 [分类](/categories) 阅读。
 
