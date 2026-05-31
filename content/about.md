@@ -21,10 +21,9 @@ cover:
 ### 抓！
 
 - 邮箱：[hi@plaintext.stream](mailto:hi@plaintext.stream)
-- 时间线：[词元鹦鹉窝](https://timeline.plaintext.stream)
 - GitHub：[Tokenicrat 词元](https://github.com/tokenicrat)
 - X: [Tokenicrat 词元](https://x.com/tokenicrat)
-- Telegram: [Tokenicrat 词元](https://t.me/tokenicrat)
+- Telegram: [Tokenicrat 词元 [PMBOT]](https://t.me/tokenicrat_pmbot)
 
 ## 词元重定向
 
@@ -54,5 +53,10 @@ cover:
 - **2026/02** 重新组织词元的站点们
   - 迁移到 `blog.plaintext.stream` 域名
   - GitHub 仓库变更为 `plaintext-stream/blog`
+- **2026/04** 短暂地换用了自托管 WordPress 方案，~~然后 VPS 商家倒闭了~~
+  - 迁移到 `journal.plaintext.stream` 域名
+  - 添加了时间线站点 `timeline.plaintext.stream`
+
+- **2026/05** 继续在本站更新内容，修修补补
 
 {{< /details >}}
