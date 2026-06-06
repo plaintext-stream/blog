@@ -1,6 +1,8 @@
 baseURL: "https://blog.plaintext.stream/"
 title: "词元重定向"
-languageCode: zh-Hans
+languages:
+  zh-hans:
+    locale: zh-hans
 theme: PaperMod
 
 enableRobotsTXT: true
