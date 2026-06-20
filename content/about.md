@@ -22,8 +22,8 @@ cover:
 
 - 邮箱：[hi@plaintext.stream](mailto:hi@plaintext.stream)
 - GitHub：[Tokenicrat 词元](https://github.com/tokenicrat)
-- X: [Tokenicrat 词元](https://x.com/tokenicrat)
 - Telegram: [Tokenicrat 词元 [PMBOT]](https://t.me/tokenicrat_pmbot)
+- X: [Tokenicrat 词元](https://x.com/tokenicrat)（不活跃）
 
 ## 词元重定向
 
@@ -36,6 +36,8 @@ cover:
 页面 URL 设成随机字符串是故意的。
 
 欢迎来看 GitHub [repo](https://github.com/plaintext-stream/blog)，自定义 tweak 在 `/layout` 和 `/assets` 里。
+
+对了，词元的站点们统称「纯文本流」，在 [首页](https://plaintext.stream) 可以看到列表。
 
 {{< details summary="更新日志" >}}
 
@@ -55,8 +57,6 @@ cover:
   - GitHub 仓库变更为 `plaintext-stream/blog`
 - **2026/04** 短暂地换用了自托管 WordPress 方案，~~然后 VPS 商家倒闭了~~
   - 迁移到 `journal.plaintext.stream` 域名
-  - 添加了时间线站点 `timeline.plaintext.stream`
-
 - **2026/05** 继续在本站更新内容，修修补补
 
 {{< /details >}}
